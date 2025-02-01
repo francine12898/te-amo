@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Mensaje Especial</title>
+    <!-- Fuente de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            color: white;
+            background-color: #000; /* Fondo negro para todo el body */
+        }
+        .container {
+            background: #fff; /* Fondo blanco para la primera página */
+            color: black; /* Texto negro */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 2;
+        }
+        .message {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .button {
+            background-color: #ff4b7b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: #ff2f68;
+        }
+        #second-page {
+            display: none; /* Inicialmente ocultamos la segunda página */
+            background-color: #000; /* Fondo negro para la segunda página */
+            padding: 30px;
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+    <script>
+        function showSecondPage() {
+            // Ocultamos la primera página y mostramos la segunda
+            document.getElementById('first-page').style.display = 'none';
+            document.getElementById('second-page').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <!-- Primera página con el mensaje y el botón -->
+    <div id="first-page" class="container">
+        <p class="message">En estos dos años que te he conocido, siempre he querido pasar este día tan especial a tu lado.</p>
+        <button class="button" onclick="showSecondPage()">Aprieta</button>
+    </div>
+    
+    <!-- Segunda página con la frase adicional -->
+    <div id="second-page">
+        <p style="font-size: 24px; background: rgba(0, 0, 0, 0.7); padding: 15px; border-radius: 10px;">
+            ¿Quieres ser mi 14 de febrero? (Sé que eres mi novio pero igual 💖)
+        </p>
+    </div>
+</body>
+</html>
